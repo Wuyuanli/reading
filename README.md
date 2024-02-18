@@ -9,7 +9,7 @@
 
 # Usage
 ```
-git clone
+git clone git@github.com:Wuyuanli/reading.git
 cd reading
 npm i
 npm run dev
