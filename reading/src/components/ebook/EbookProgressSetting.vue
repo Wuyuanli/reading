@@ -100,7 +100,8 @@ function displaySection() {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .setting-wrapper {
   position: absolute;
   bottom: 2.7rem;
@@ -108,7 +109,7 @@ function displaySection() {
   left: 0;
   z-index: 200;
   width: 100%;
-  background: #fff;
+  background: $color-white;
   box-shadow: 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.15);
 
   .setting-progress {
@@ -123,17 +124,13 @@ function displaySection() {
       width: 100%;
       height: 2rem;
       font-size: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
     }
     .progress-wrapper {
       width: 100%;
       height: 100%;
       padding: 0 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
       box-sizing: border-box;
       .progress-icon-wrapper {
         cursor: pointer;
@@ -155,9 +152,9 @@ function displaySection() {
           height: 1.2rem;
           width: 1.2rem;
           border-radius: 50%;
-          background: #fff;
+          background: $color-white;
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-          border: px2rem(1) solid #ccc;
+          border: px2rem(1) solid $color-gray2;
         }
       }
     }
@@ -170,9 +167,7 @@ function displaySection() {
       font-size: .9rem;
       padding: 0 1.1rem;
       box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
       .progress-section-text {
         text-overflow: ellipsis;
         overflow: hidden;

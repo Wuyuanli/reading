@@ -27,12 +27,13 @@ function jump(){
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .title-wrapper{
   position: relative;
   height: 1rem;
   padding: 1.6rem .6rem .8rem .6rem;
-  background-color: #fff;
+  background-color: $color-white;
 
   .label{
     position: absolute;

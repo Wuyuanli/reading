@@ -94,14 +94,14 @@ function shrinkName(name){
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .title{
   padding-top: 1rem;
 }
 .book-wrapper{
   margin: 1rem 0;
-  display: flex;
-  justify-content: center;
+  @include horizonCenter;
   .item-wrapper{
     width: 24%;
     

@@ -44,7 +44,8 @@ function setFontFamily() {
     </div>
   </template>
   
-  <style scoped>
+  <style lang="scss" scoped>
+  @import "../../assets/global.scss";
   .setting-wrapper {
     box-shadow: 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.15);
     position: absolute;
@@ -52,26 +53,20 @@ function setFontFamily() {
     height: 6rem;
     width: 100%;
     background-color: rgb(206, 206, 206);
-    display: flex;
-    flex-direction: column;
+    @include vertical;
     z-index: 200;
   }
   
   .setting-font-size {
     flex: 1.8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
   
     .preview {
       flex: 1;
       text-align: center;
     }
     .select {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include verticalCenter;
        position: relative;
       .line {
         height: 0.2rem;
@@ -92,10 +87,8 @@ function setFontFamily() {
           border-radius: 50%;
           height: 0.7rem;
           width: 0.7rem;
-          background-color: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          background-color: $color-white;
+          @include center;
           .small-point{
             width: .2rem;
             height: .2rem;
@@ -110,9 +103,7 @@ function setFontFamily() {
   .setting-font-family {
     flex: 1;
     font-size: 0.9rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     .font-family-wrapper {
       margin-right: 0.2rem;
     }

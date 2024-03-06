@@ -99,7 +99,8 @@ onBeforeMount(()=>{
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/global.scss";
 .store-detail {
   position: absolute;
   .book-info {
@@ -129,7 +130,7 @@ onBeforeMount(()=>{
       .book-author {
         font-size: 0.8rem;
         padding: 0 0 0.4rem 0;
-        color: #2b90d9;
+        color: $color-blue;
       }
       .book-read {
         font-size: 0.8rem;
@@ -139,9 +140,7 @@ onBeforeMount(()=>{
   
   .line-wrapper {
     height: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
     .line {
       width: 90%;
       height: 1px;
@@ -154,8 +153,7 @@ onBeforeMount(()=>{
     margin: 3rem 2rem;
     text-align: left;
     font-size: 1.1rem;
-    display: flex;
-    flex-direction: column;
+    @include vertical;
     .row {
       padding: 0.5rem 0 0 0;
       display: flex;

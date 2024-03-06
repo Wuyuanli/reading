@@ -22,7 +22,8 @@ const onClickRight = () =>{
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .title-wrapper{
     width: 100%;
     height: 3rem;
@@ -32,6 +33,6 @@ const onClickRight = () =>{
     top: 0;
     left: 0;
     z-index: 200;
-    background-color: #fff;
+    background-color: $color-white;
 }
 </style>

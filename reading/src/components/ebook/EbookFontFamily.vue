@@ -53,7 +53,8 @@ function select(font) {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .ebook-popup-list{
   box-shadow: 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -79,9 +80,7 @@ function select(font) {
 }
 
 .set-font-family-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
 
   font-size: 1.1rem;
   font-weight: bold;

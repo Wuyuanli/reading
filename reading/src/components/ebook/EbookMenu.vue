@@ -28,7 +28,8 @@ function menuSetting(val) {
     </div>
 </template>
   
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .menu-wrapper {
   height: 3rem;
   width: 100%;
@@ -44,6 +45,6 @@ function menuSetting(val) {
   
   font-size: 2rem;
 
-  background-color: #fff;
+  background-color: $color-white;
 }
 </style>

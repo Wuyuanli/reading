@@ -23,16 +23,15 @@ function deleteBook(){
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .footer-wrapper{
     width: 100%;
     position: fixed;
     bottom: 3rem;
     right: 0;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    background-color: #fff;
+    @include right;
+    background-color: $color-white;
 
     .text{
         padding-right: 1rem;

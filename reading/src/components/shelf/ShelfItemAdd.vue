@@ -7,18 +7,17 @@
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .shelf-item-add {
   width: 100%;
   height: 100%;
   border: .07rem solid #bbb;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
   .icon-add {
     font-size: 3rem;
-    color: #ccc;
+    color: $color-gray2;
   }
 }
 </style>

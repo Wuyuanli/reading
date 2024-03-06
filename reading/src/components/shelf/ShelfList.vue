@@ -47,7 +47,8 @@ ifAddIsExit(shelfList)
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .shelf-list {
   width: 100%;
   height: 100%;
@@ -67,9 +68,7 @@ ifAddIsExit(shelfList)
       padding: 1rem 1rem;
       box-sizing: border-box;
       margin-top: 1.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
 
       .item-instance {
         width: 100%;

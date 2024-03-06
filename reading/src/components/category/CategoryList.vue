@@ -36,7 +36,8 @@ function showCategoryList(category){
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .title{
     padding-left: 1rem;
 }
@@ -52,10 +53,7 @@ function showCategoryList(category){
     display: grid;
     grid-template-columns: 60% 40%;
     .left {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include verticalCenter;
       .categoryNum {
         font-weight: bold;
         font-size: 1.1rem;
@@ -68,19 +66,13 @@ function showCategoryList(category){
       position: relative;
       margin-right: 1rem;
       .image1 {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        @include absCenter;
         z-index: 100;
         width: 3rem;
         height: 4.5rem;
       }
       .image2 {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        @include absCenter;
         transform: translate(5%, -50%);
         width: 2rem;
         height: 3rem;

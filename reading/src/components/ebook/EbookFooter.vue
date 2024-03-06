@@ -20,7 +20,8 @@ onMounted(()=>{
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .ebook-footer {
   position: absolute;
   bottom: 0;
@@ -32,9 +33,7 @@ onMounted(()=>{
   padding: 0 .4rem;
   box-sizing: border-box;
   
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include right;
   .ebook-footer-text {
     font-size: .6rem;
     color: #666;

@@ -98,7 +98,8 @@ function showBookDetail(fileName, categoryText) {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .shelf-item {
   width: 100%;
   height: 100%;
@@ -110,19 +111,13 @@ function showBookDetail(fileName, categoryText) {
   line-height: 1rem;
   text-align: left;
   height: 2rem;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  white-space: normal;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-break: keep-all;
+  @include ellipseWithLine(2);
   
 }
 
   .icon-selected {
     &.is-selected {
-      color: #409EFF;
+      color: $color-blue2;
     }
   }
 }

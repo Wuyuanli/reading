@@ -77,13 +77,11 @@ function remove() {
 </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .detail-footer {
   position: fixed;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; 
-
+  @include twoSide;
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -92,8 +90,8 @@ function remove() {
   font-size: 1rem;
   font-weight: bold;
 
-  background-color: #fff;
-  color: #2b90d9;
+  background-color: $color-white;
+  color: $color-blue;
   text-align: center;
 
   &.show-shadow {

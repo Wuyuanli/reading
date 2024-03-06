@@ -105,10 +105,11 @@ const searchList = {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .wrapper{
   position: absolute;
-  background-color: #fff;
+  background-color: $color-white;
   height: 150%;
   width: 100%;
   z-index: 100;

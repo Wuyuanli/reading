@@ -132,7 +132,8 @@ function delBookMark() {
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .ebook-bookmark {
   position: absolute;
   top: -10rem;
@@ -151,15 +152,13 @@ function delBookMark() {
     display: flex;
     .ebook-bookmark-down-wrapper {
       font-size: 14px;
-      color: #fff;
+      color: $color-white;
       transition: all 0.2s linear;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
     }
     .ebook-bookmark-text {
       font-size: 1.1rem;
-      color: #fff;
+      color: $color-white;
     }
   }
   .ebook-bookmark-icon-wrapper {

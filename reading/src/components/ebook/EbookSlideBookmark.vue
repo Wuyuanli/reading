@@ -62,7 +62,8 @@ function delBookmark(cfi,e){
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .ebook-slide-bookmark {
   .slide-bookmark-title {
     height: 2rem;
@@ -70,9 +71,7 @@ function delBookmark(cfi,e){
     font-size: 16px;
     font-weight: bold;
     box-sizing: border-box;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include left;
   }
   .slide-bookmark-list {
     .slide-bookmark-item {
@@ -80,9 +79,7 @@ function delBookmark(cfi,e){
         height: 3rem;
         padding: 0.2rem .4rem;
       .slide-bookmark-item-icon {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
+        @include left;
         .icon-bookmark {
             font-size: 14px;
             width: .8rem;

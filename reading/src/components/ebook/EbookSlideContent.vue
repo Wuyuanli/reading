@@ -191,12 +191,12 @@ onMounted(()=>{
     </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .ebook-slide-contents {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  @include vertical;
   .slide-contents-search-wrapper {
     display: flex;
     width: 100%;
@@ -208,9 +208,7 @@ onMounted(()=>{
     .slide-contents-search-input-wrapper {
       flex: 1;
       margin-left: 0.4rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include center;
       .slide-contents-search-icon {
         flex: 0.2;
       }
@@ -232,9 +230,7 @@ onMounted(()=>{
     }
     .slide-contents-book-info-wrapper {
       flex: 2;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      @include flexAround;
 
       padding: 0.5rem 0;
       .slide-contents-book-title {
@@ -242,36 +238,20 @@ onMounted(()=>{
         line-height: 1.1rem;
         text-align: left;
         box-sizing: content-box;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        white-space: normal;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-break: keep-all;
+        @include ellipseWithLine(3);
       }
       .slide-contents-book-author {
         font-size: 12px;
         box-sizing: content-box;
         text-align: left;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
-        white-space: normal;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        word-break: keep-all;
+        @include ellipseWithLine(1);
       }
     }
     .slide-contents-book-progress-wrapper {
       flex: 1;
       line-height: 1.2rem;
       font-size: 1rem;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      @include leftAndColCenter;
 
       .slide-contents-book-progress {
         padding: 0.2rem 0;
@@ -312,9 +292,7 @@ onMounted(()=>{
 .slide-contents-search-cancel {
   flex: 0.2;
   margin-left: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include center;
 }
 
 .slide-search-list {

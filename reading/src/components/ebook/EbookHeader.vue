@@ -16,7 +16,8 @@ const sectionName = getSectionName()
     </div>
 </template>
   
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .ebook-header {
   position: absolute;
   top: 0;
@@ -30,12 +31,10 @@ const sectionName = getSectionName()
   box-sizing: border-box;
   
   overflow: hidden;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include left;
   .ebook-header-text {
     font-size: .6rem;
-    color: #666;
+    color: $color-gray3;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;

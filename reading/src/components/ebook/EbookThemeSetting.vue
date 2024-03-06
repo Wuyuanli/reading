@@ -96,7 +96,8 @@ function setTheme(index) {
     </div>
 </template>
   
-  <style scoped>
+  <style lang="scss" scoped>
+  @import "../../assets/global.scss";
   .setting-wrapper {
     width: 100%;
     bottom: 2.7rem;
@@ -104,20 +105,19 @@ function setTheme(index) {
     box-shadow: 0 -0.5rem 0.5rem rgba(0, 0, 0, 0.15);
     position: absolute;
     z-index: 200;
-    background-color: #fff;
+    background-color: $color-white;
     .setting-theme {
       margin-top: 0.6rem;
       height: 80%;
       display: flex;
       .setting-theme-item {
         flex: 1;
-        display: flex;
-        flex-direction: column;
+        @include vertical;
         padding: 0.13rem;
         box-sizing: border-box;
         .preview {
           flex: 1;
-          border: 0.13rem solid #ccc;
+          border: 0.13rem solid $color-gray2;
           box-sizing: border-box;
           &.selected {
             box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.1);
@@ -128,11 +128,9 @@ function setTheme(index) {
           font-size: 0.13rem;
           color: #ccc;
           /* margin-top: .5rem; */
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include center;
           &.selected {
-            color: #333;
+            color: $color-gray4;
           }
         }
       }

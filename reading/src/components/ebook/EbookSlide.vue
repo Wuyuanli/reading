@@ -62,7 +62,8 @@ function selectTab(tab) {
     </transition>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../../assets/global.scss";
 .slide-content-wrapper {
   position: absolute;
   top: 0;
@@ -74,10 +75,8 @@ function selectTab(tab) {
 
   .content {
   width: 85%;
-  /* background-color: #fff; */
   .content-page-wrapper {
-    display: flex;
-    flex-direction: column;
+    @include vertical;
     width: 100%;
     height: 100%;
     .content-page {
@@ -91,9 +90,7 @@ function selectTab(tab) {
 
       .content-page-tab-item {
         flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include center;
         box-shadow: 0 -0.1rem 0.1rem rgba(0, 0, 0, 0.15);
         box-sizing: border-box;
       }
@@ -105,9 +102,7 @@ function selectTab(tab) {
   .content-empty {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center;
   }
 }
 
